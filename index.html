@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <h1 class="main_heading">Payment Form</h1>
+        <p>Required fields are mandatory *</p>
+        <h2>Contact Information</h2>
+        <p>
+          First Name: *<input
+            type="text"
+            name="fname"
+            required
+            placeholder="Sahil"
+          />
+        </p>
+        <p>
+          Last Name: *<input
+            type="text"
+            name="lname"
+            required
+            placeholder="Khan"
+          />
+        </p>
+        <fieldset>
+          <legend>Gender: *</legend>
+          <p>
+            <label for="male">
+              Male <input type="radio" name="gender" id="male" required />
+            </label>
+            <label for="female"
+              >Female <input type="radio" name="gender" id="female" required />
+            </label>
+          </p>
+        </fieldset>
+        <p>
+          Address:
+          <textarea
+            name="address"
+            id="address"
+            cols="30"
+            rows="5"
+            placeholder="Enter your address"
+          ></textarea>
+        </p>
+        <p>
+          Phone Number: *<input
+            type="number"
+            name="phn_num"
+            id="phn_num"
+            required
+          />
+        </p>
+        <p>Email: *<input type="email" name="email" id="email" required /></p>
+        <p>
+          Pin Code: *<input
+            type="number"
+            name="pincode"
+            id="pincode"
+            maxlength="6"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            required
+          />
+        </p>
+        <h2>Payment Information</h2>
+        <p>
+          Card Type: *
+          <select name="card_type" id="card_type" required>
+            <option value="">--Select a Card--</option>
+            <option value="visa">Visa</option>
+            <option value="rupay">Rupay</option>
+            <option value="mastercard">Mastercard</option>
+          </select>
+        </p>
+        <p>
+          Card Number: *<input
+            type="number"
+            name="card_num"
+            id="card_num"
+            required
+          />
+        </p>
+        <p>
+          Expiry Date: *<input
+            type="date"
+            name="expiry_date"
+            id="expiry_date"
+            required
+          />
+        </p>
+        <p>CVV: *<input type="password" name="cvv" id="cvv" required /></p>
+        <p>Submit: <input type="submit" value="Pay Now" /></p>
+        <form class="payment">         
+        </form>
+      </form>
+    </div>
+  </body>
+</html>
